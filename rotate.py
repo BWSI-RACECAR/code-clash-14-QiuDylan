@@ -45,8 +45,8 @@ class Solution:
                 matrix[row0+i][col1] = temp
             row0 += 1
             col0 += 1
-            row1 == 1
-            col1 == 1
+            row1 -= 1
+            col1 -= 1
 
 
         return matrix
