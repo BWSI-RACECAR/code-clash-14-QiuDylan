@@ -27,17 +27,29 @@ Input = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]] ;  Output = [[15,13,2,5
 class Solution:
     def rotate(self,matrix):
         # type matrix: List[List[int]]HTS2405
-        
+
         # return: List[List[int]]
         
         # TODO: Write code below to return a nested list with the solution to the prompt
 
-        for i in (matrix):
-            for j in i:
-                number = len(j)
+        row0 = 0
+        col0 = 0
+        row1 = len(matrix) -1
+        col1 = len(matrix) - 1
+        while row0 < row1 and col0 < col1: 
+            for i in range(col1- col0):
+                temp = matrix[row0][col0 + i]
+                matrix[row0][col0 + i] = matrix[row1-i][col0]
+                matrix[row1-i][col0] = matrix[row1][col0-i]
+                matrix[row1][col1-i] = matrix[row0+i][col1]
+                matrix[row0+i][col1] = temp
+            row0 += 1
+            col0 += 1
+            row1 == 1
+            col1 == 1
 
 
-        return number
+        return matrix
 
 
 
