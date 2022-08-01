@@ -34,8 +34,8 @@ class Solution:
 
         row0 = 0
         col0 = 0
-        row1 = len(matrix)
-        col1 = len(matrix) 
+        row1 = len(matrix) - 1
+        col1 = len(matrix) - 1
         while row0 < row1 and col0 < col1: 
             for i in range(col1 - row0):
                 temp = matrix[row0][col0 + i]
