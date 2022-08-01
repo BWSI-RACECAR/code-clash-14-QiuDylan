@@ -37,7 +37,7 @@ class Solution:
         row1 = len(matrix) -1
         col1 = len(matrix) - 1
         while row0 < row1 and col0 < col1: 
-            for i in range(col1, row1):
+            for i in range(col1, row0):
                 temp = matrix[row0][col0 + i]
                 matrix[row0][col0 + i] = matrix[row1-i][col0]
                 matrix[row1-i][col0] = matrix[row1][col0-i]
